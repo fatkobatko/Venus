@@ -99,8 +99,10 @@ int main(int argc, char *argv[])
     // waiting for fct on_connect to flip "mqtt_connected"
 
     SDL_Event e;
-    while (!mqtt_connected) {
-        while (SDL_PollEvent(&e)) {
+    while (!mqtt_connected) 
+    {
+        while (SDL_PollEvent(&e)) 
+        {
             if (e.type == SDL_QUIT)
                 goto clean;
         }
